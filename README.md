@@ -1,5 +1,5 @@
 # Patch Pitch
-Patch Pitch is a React + Nextjs web app where users can create and manage single multimedia cards.
+Patch Pitch is a React + Nextjs web app where users can create and manage single or collections of cards and convert them into graphics.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
