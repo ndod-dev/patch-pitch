@@ -24,6 +24,7 @@
 .DS_Store
 *.pem
 *.log
+.idea
 
 # debug
 npm-debug.log*
@@ -36,7 +37,6 @@ yarn-error.log*
 
 # vercel
 .vercel
-.firebase
 
 # typescript
 *.tsbuildinfo
@@ -47,3 +47,4 @@ next-env.d.ts
 .firestore.rules
 firestore.indexes.json
 firestore.rules
+.firebase
