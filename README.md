@@ -3,6 +3,8 @@ Patch Pitch is a React + Nextjs web app where users can create and manage single
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+**See the project Figma here:** https://www.figma.com/design/JKSgKPx6imJjyL7wzD0RpE/patch-pitch?node-id=0-1&t=6VWYnH90SNDY0RF1-1
+
 ## Getting Started
 
 First, run the development server:
