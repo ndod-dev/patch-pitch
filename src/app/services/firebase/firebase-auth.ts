@@ -1,5 +1,16 @@
-﻿import { initializeApp } from "firebase/app";
-import {createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword} from "firebase/auth";
+﻿/** 
+ * Set up basic firebase auth files for later implementation. 
+ * TODO: For now, we'll get this app working locally; implement firebase sign-in later. 
+ * */
+
+import { initializeApp } from "firebase/app";
+import {
+    createUserWithEmailAndPassword,
+    getAuth,
+    signInWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup
+} from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_APIKEY,
@@ -50,4 +61,34 @@ export const signUpWithEmailAndPassword = (email: string, password: string) => {
             const errorCode = error.code;
             const errorMessage = error.message;
         });
+}
+
+export const signInWithGoogle = () => {
+    const provider = new GoogleAuthProvider();
+    
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            
+            if (!credential?.accessToken) {
+                console.error("No access token found");
+                return;
+            }
+            
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const user = result.user;
+            // IdP data available using getAdditionalUserInfo(result)
+            // ...
+        }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+    });
 }
