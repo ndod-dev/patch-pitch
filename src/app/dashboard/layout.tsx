@@ -5,11 +5,7 @@ import React from "react";
  * @param children
  * @constructor
  */
-export default function DashboardLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function DashboardLayout({children}: {children: React.ReactNode}) {
   return (
       <>
       <div className={'header'}><p>Header</p></div>

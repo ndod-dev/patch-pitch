@@ -5,11 +5,7 @@ import React from "react";
  * @param children
  * @constructor
  */
-export default function QuiltLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function QuiltLayout({children}: {children: React.ReactNode}) {
   return (
       <>
       <div className={'header'}><h1>Quilts Header</h1></div>

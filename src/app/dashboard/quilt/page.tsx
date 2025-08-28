@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+/**
+ * Page that routes to the display for a specific quilt (see [slug]/page.tsx).
+ * @constructor
+ */
 export default function QuiltPage() {
     return (
         <>
