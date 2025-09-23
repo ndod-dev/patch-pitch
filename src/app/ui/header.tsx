@@ -2,13 +2,13 @@ import {jaro} from "@/app/fonts";
 
 export default function Header() {
     return (
-        <div className="flex flex-row w-full px-10 py-4 md:px-2 h-[90px] bg-linear-to-r from-[#6EBBEA] to-[#067AFF] text-white">
+        <div className="flex flex-row w-full px-6 py-4 h-[90px] bg-linear-to-r from-patch-blue-secondary to-patch-blue-primary text-white place-content-between">
             <div>
                 <h1 className={`${jaro.className}`}>Dashboard</h1>
             </div>
-            <div className={`${jaro.className}`}>
-                <div>user_name</div>
-                <div>Image</div>
+            <div className={`flex flex-row ${jaro.className} place-content-around`}>
+                <div><p>user_name</p></div>
+                <div><p>Image</p></div>
             </div>
         </div>
     );
