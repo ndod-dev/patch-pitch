@@ -1,4 +1,5 @@
 import {jaro} from "@/app/fonts";
+import {Bars3Icon} from "@heroicons/react/16/solid";
 
 /**
  * Properties for the header component.
@@ -35,7 +36,9 @@ export default function Header(props?: HeaderProps) {
             </div>
             <div className={`flex flex-row place-content-around gap-5 ${jaro.className} py-4`}>
                 <div><p>patch_user_name</p></div>
-                <div><p>ImageButton</p></div>
+                <div>
+                    <Bars3Icon className="size-6 hover:text-patch-blue-secondary"/>
+                </div>
             </div>
         </div>
     );
