@@ -2,7 +2,7 @@ import React from "react";
 import Header from "@/app/ui/header";
 
 /**
- * The layout for auth pages, such as the sign in and log in pages.
+ * The layout for auth-related pages, such as the sign in and log in pages.
  * @param children
  * @constructor
  */
