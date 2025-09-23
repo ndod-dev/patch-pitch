@@ -7,6 +7,8 @@ import Header from "@/app/ui/header";
  * @constructor
  */
 export default function DashboardLayout({children}: {children: React.ReactNode}) {
+
+    
   return (
       <>
           <Header/>

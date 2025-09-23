@@ -1,5 +1,8 @@
+"use client"
 import {jaro} from "@/app/fonts";
 import {Bars3Icon} from "@heroicons/react/16/solid";
+import SideDrawer from "@/app/ui/side-drawer";
+import React from "react";
 
 /**
  * Properties for the header component.
@@ -15,6 +18,7 @@ type HeaderProps = {
  * @param props - Config props for the Header component.
  */
 export default function Header(props?: HeaderProps) {
+    const [open, setOpen] = React.useState(false);
     const {isLandingHeader} = props ? props : false;
     
     if (isLandingHeader) {
@@ -29,6 +33,8 @@ export default function Header(props?: HeaderProps) {
     }
     
     return (
+        <>
+        <SideDrawer isOpen={open} setOpen={setOpen}/>
         <div
             className="flex flex-row w-full px-6 py-4 h-[90px] bg-linear-to-r place-content-between from-patch-blue-secondary to-patch-blue-primary text-white">
             <div>
@@ -37,9 +43,10 @@ export default function Header(props?: HeaderProps) {
             <div className={`flex flex-row place-content-around gap-5 ${jaro.className} py-4`}>
                 <div><p>patch_user_name</p></div>
                 <div>
-                    <Bars3Icon className="size-6 hover:text-patch-blue-secondary"/>
+                    <Bars3Icon className="size-6 hover:text-patch-blue-secondary" onClick={() => setOpen(!open)}/>
                 </div>
             </div>
         </div>
+        </>
     );
 }
