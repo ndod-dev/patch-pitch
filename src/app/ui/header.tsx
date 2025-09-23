@@ -5,7 +5,7 @@ import {jaro} from "@/app/fonts";
  *  @param {boolean} isLandingHeader - Should this component render the landing variant instead?
  */
 type HeaderProps = {
-    isLandingHeader: boolean
+    isLandingHeader?: boolean
 }
 
 /**
